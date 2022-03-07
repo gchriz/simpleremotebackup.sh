@@ -73,7 +73,7 @@ fi
 # if there is a password given, prepend a colon for later use in lftp
 [ -n "${TGTPW}" ] && TGTPW=":${TGTPW}"
 
-LFTP_CFG="set net:timeout 5; set net:max-retries 1;"
+LFTP_CFG="set net:timeout 5; set net:max-retries 1; set sftp:auto-confirm yes;"
 LFTP_CMD="mirror --reverse --verbose=2"
 LFTP_SRV=sftp://${TGTUSR}${TGTPW}@${TGTSRV}
 LFTP_DIR=${TGTROOTDIR}

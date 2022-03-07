@@ -3,9 +3,6 @@
 A simple backup script to copy a local directory via *sftp* protocol
 to a remote server, using the program *lftp*.
 
-When connecting to a remote server for the first time, *lftp* might complain or hang.  
-Please use an initial manual `ssh user@server` to complete the "known-hosts" dialog.
-
 Have fun, but use this script on your own risk! No warranties at all.
 
 ## Optional creation of sourcedir's name as target's basedir
@@ -77,3 +74,9 @@ would produce the following structures in the target directory 'TGTROOTDIR':
   │       └── file2.txt               │           ├── file1.txt
                                       │           └── file2.txt
 ```
+
+## Notes
+
+When connecting to a remote server for the first time, *lftp* might complain or hang.  
+Please use an initial manual `ssh user@server` to complete the "known-hosts" dialog.  
+That should be fixed now, but I'll keep this note here.
