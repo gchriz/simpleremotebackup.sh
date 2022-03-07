@@ -3,7 +3,7 @@
 A simple backup script to copy a local directory via *sftp* protocol
 to a remote server, using the program *lftp*.
 
-Have fun, but use this script on your own risk! No warranties at all.
+Have fun, but use this script at your own risk! No warranties at all.
 
 ## Optional creation of sourcedir's name as target's basedir
 
