@@ -1,7 +1,7 @@
 # simpleremotebackup.sh
 
-A simple backup script to copy a local directory to a remote server
-via *sftp* protocol, using the program *lftp*.
+A simple backup script to copy a local directory via *sftp* protocol
+to a remote server, using the program *lftp*.
 
 When connecting to a remote server for the first time, *lftp* might complain or hang.  
 Please use an initial manual `ssh user@server` to complete the "known-hosts" dialog.
@@ -24,11 +24,16 @@ See the example below (TGTCREATEBASEDIR).
 * one subdirectory per week (W01..W53) with sub-subdirectories per day of week (Mon..Sun, by locale)
 * one subdirectory per month (01..12) with sub-subdirectories per day (01..31)
 
+## Configuration
+
+The above mentioned different behaviors can be configured right within the scripts sourceode.
+There are some more details explained.
+
 ## Examples
 
-With two files to save from 'SRCDIR' '.../data'
-on 'Sun Mar 6 2022' the above types of VERSIONDIR
-would produce the following in the target directory 'TGTROOTDIR':
+With two files in 'SRCDIR' '.../data' to be saved
+on 'Sunday Mar 6 2022' the above types of VERSIONDIR
+would produce the following structures in the target directory 'TGTROOTDIR':
 
 ```
                           with
@@ -59,6 +64,7 @@ would produce the following in the target directory 'TGTROOTDIR':
   │       ├── file1.txt               │       └── data
           └── file2.txt               │           ├── file1.txt
                                       │           └── file2.txt
+
   ├── W09                             ├── W09
   │   └── Sun                         │   └── Sun
   │       ├── file1.txt               │       └── data

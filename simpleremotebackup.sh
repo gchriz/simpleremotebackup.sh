@@ -6,7 +6,7 @@
 # Optionally an (e.g.) rotating version strategy can be configured.
 # See VERSIONDIR below.
 #
-# When connecting to a remote sftp server for the first time,
+# Note: When connecting to a remote sftp server for the first time,
 # lftp might complain or hang. Please use an initial manual
 # 'ssh user@target-server' to complete the "known-hosts" dialog.
 #
@@ -65,7 +65,7 @@ fi
 
 which lftp >/dev/null 2>&1
 if [ $? -ne 0 ] ; then
-    echo "Error: The program 'lftp' is required."
+    echo "Error: The program 'lftp' is required but is missing."
     echo "Please install it with e.g.:  sudo apt install lftp"
     exit 2
 fi
