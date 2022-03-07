@@ -10,7 +10,7 @@
 # lftp might complain or hang. Please use an initial manual
 # 'ssh user@target-server' to complete the "known-hosts" dialog.
 #
-# Have fun, but use this script on your own risk! No warranties at all.
+# Have fun, but use this script at your own risk! No warranties at all.
 
 # ---------- Configuration - Start
 
