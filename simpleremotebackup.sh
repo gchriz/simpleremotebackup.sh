@@ -86,6 +86,11 @@ lftp -e "${LFTP_CFG}; lcd ${SRCDIR} && ${LFTP_CMD} -O ${LFTP_DIR} ; quit" ${LFTP
 
 # The possible final message from lftp, "To be removed: ..."
 # denotes some older/other data in the target directory LFTP_DIR.
-# That could be automatically deleted by lftp with the additional option '--delete'.
-# BUT BE VERY CAREFULL or all other parallel backups are gone when done wrong!
+# That data could be automatically deleted by lftp with the additional option
+#     '--delete' in LFTP_CMD.
+#
+# BUT BE VERY CAREFUL or all other parallel backups/data are/is gone when done wrong!
+# It's like an 'rm -r' in the **current** LFTP_DIR and then copying the new data there.
+# When changing target pathes the rating what is current and what is "old" might
+# not always be obvious - at least for the commands...
 

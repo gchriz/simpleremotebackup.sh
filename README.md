@@ -77,6 +77,17 @@ would produce the following structures in the target directory 'TGTROOTDIR':
 
 ## Notes
 
-When connecting to a remote server for the first time, *lftp* might complain or hang.  
-Please use an initial manual `ssh user@server` to complete the "known-hosts" dialog.  
-That should be fixed now, but I'll keep this note here.
+* The possible final message from *lftp*, "To be removed: ..."
+  denotes some older/other data in the target directory LFTP_DIR.
+  That data could be automatically deleted by *lftp* with the additional option
+
+    `--delete` in the scripts variable LFTP_CMD.
+
+  BUT BE VERY CAREFUL or all other parallel backups/data are/is gone when done wrong!
+  It's like an `rm -r *` in the **current** LFTP_DIR and then copying the new data there.
+  When changing target pathes the rating what is current and what is "old" might
+  not always be obvious - at least for the commands...
+
+* When connecting to a remote server for the first time, *lftp* might complain or hang.  
+  Please use an initial manual `ssh user@server` to complete the "known-hosts" dialog.  
+  That should be fixed now, but I'll keep this note here.
